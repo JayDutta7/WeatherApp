@@ -1,5 +1,6 @@
 # WeatherApp
-Native Kotlin,
+Native Android Application,
+Kotlin,
 MVVM,
 Rxjava2,
 Retrofit2,
