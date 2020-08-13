@@ -1,6 +1,6 @@
 # WeatherApp
-Native Kotlin
-Architecture - MVVM
-Rxjava2
-Retrofit2
-RoomDatabase
+Native Kotlin,
+MVVM,
+Rxjava2,
+Retrofit2,
+RoomDatabase,
