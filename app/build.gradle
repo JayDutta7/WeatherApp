@@ -4,13 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-
     def apiKeyPropertiesFile = rootProject.file("apikey.properties")
     def apiKeyProperties = new Properties()
     apiKeyProperties.load(new FileInputStream(apiKeyPropertiesFile))
 
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion "29.0.3"
+    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         applicationId "com.home.weatherapp"
