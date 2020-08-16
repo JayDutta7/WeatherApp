@@ -19,8 +19,8 @@ interface ApiInterface {
 
 
     /*todo------((Api1--Get Values))*/
-    @POST
-    fun getResult(@Url speechUrl: String, @Body jsonValue: JsonValue): Single<Response<ApiResponse>>
+    /*@POST
+    fun getResult(@Url speechUrl: String, @Body jsonValue: JsonValue): Single<Response<ApiResponse>>*/
 
 
     /**Create Retrofit Service--By Calling class Create Retrofit**/
