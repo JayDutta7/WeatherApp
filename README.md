@@ -2,6 +2,7 @@
 Native Android Application,
 Kotlin,
 MVVM,
-Rxjava2,
+LiveData,
+Coroutine,
 Retrofit2,
 RoomDatabase,
