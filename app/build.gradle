@@ -14,11 +14,11 @@ android {
 
     defaultConfig {
         applicationId "com.home.weatherapp"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         multiDexEnabled true
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // should correspond to key/value pairs inside the file
         buildConfigField("String", "CONSUMER_KEY", apiKeyProperties['CONSUMER_KEY'])
