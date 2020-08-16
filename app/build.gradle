@@ -7,6 +7,10 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    def apiKeyPropertiesFile = rootProject.file("apikey.properties")
+    def apiKeyProperties = new Properties()
+    apiKeyProperties.load(new FileInputStream(apiKeyPropertiesFile))
+
     defaultConfig {
         applicationId "com.home.weatherapp"
         minSdkVersion 21
@@ -14,15 +18,23 @@ android {
         multiDexEnabled true
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // should correspond to key/value pairs inside the file
+        buildConfigField("String", "CONSUMER_KEY", apiKeyProperties['CONSUMER_KEY'])
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true  // shrink
+            //useProguard true   // don't obfuscate
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false  // shrink
+            //useProguard true   // don't obfuscate
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
     }
     androidExtensions {
         experimental = true

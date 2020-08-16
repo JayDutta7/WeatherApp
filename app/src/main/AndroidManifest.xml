@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.home.weatherapp">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- Always required on api < 21, needed to keep a wake lock while your job is running -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required on all api levels if you are using setPersisted(true) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /><!-- Internet Permission -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
